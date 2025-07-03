@@ -29,6 +29,10 @@ let notes = [
   }
 ]
 
+app.get('/info', (req, res) => {
+  res.send('info')
+})
+
 app.get('/api/notes', (req, res) => {
   res.json(notes)
 })
