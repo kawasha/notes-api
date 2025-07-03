@@ -1,0 +1,24 @@
+@baseUrl = http://localhost:3001/api/notes
+
+GET {{baseUrl}}
+
+###
+
+GET {{baseUrl}}/2
+
+###
+
+DELETE {{baseUrl}}/5
+
+###
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "content": "Take a shower"
+}
+
+###
+
+GET {{baseUrl}}/foo/da
