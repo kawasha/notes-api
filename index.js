@@ -4,6 +4,7 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors())
+app.use(express.static('dist'))
 app.use(express.json())
 
 app.use((req, res, next) => {
@@ -67,7 +68,7 @@ app.post('/api/notes', (req, res) => {
   const note = {
     content: body.content,
     important: body.important || false,
-    id: generateId()
+    id: String(generateId())
   }
 
   notes = notes.concat(note)
